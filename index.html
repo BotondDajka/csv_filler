@@ -14,7 +14,33 @@
         <title>CSV File filler</title>
     </head>
     <body>
-        
-        <script src="script.js"></script>
+        <div class="container d-flex flex-column justify-content-center align-items-center p-5 ">
+            <h1 class="text-white">TassoFill</h1>
+            <form class="d-flex flex-column shadow">
+                <p class="text-danger d-none" id="errorMsg"></p>
+                <div class="d-flex justify-content-between">
+                    <label for="fileToFill">CSV to fill:</label>
+                    <input type="file" id="fileToFill" name="fileToFill" required>
+                </div>
+                
+                <div>
+                    <label for="fileToFillWith">CSV to fill with:</label>
+                    <input type="file" id="fileToFillWith" name="fileToFillWith" required>
+                </div>
+                <div>
+                    <label for="columnToIdentifyBy">Column to identify by:</label>
+                    <input type="text" id="columnToIdentifyBy" name="columnToIdentifyBy" class="form-control d-inline-block" style="width: 59%;; height: 28px;" required>
+                </div>
+                <button id="submitBtn" type="button" class="btn btn-success">
+                    <div id="submitBtnSpinner" class="d-none spinner-border text-light" style="width: 1.2rem; height: 1.2rem;" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    <span id="submitBtnFill">Fill</span>
+                </button>
+
+            </form>
+
+            <script src="script.js"></script>
+        </div>
     </body>
 </html>
